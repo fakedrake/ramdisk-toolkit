@@ -26,7 +26,7 @@ new-ramdisk: mount-root
 	sudo mount -o loop $(RESOURCES_DIR)/ramdisk.img $(DRAFTS_DIR)
 	sudo cp -R $(FILESYSTEM_ROOT)/* $(DRAFTS_DIR)
 
-clean-ramdisk:
+clean-ramdisk: clean-root
 	sudo umount $(DRAFTS_DIR)
 	rmdir $(DRAFTS_DIR)
 
