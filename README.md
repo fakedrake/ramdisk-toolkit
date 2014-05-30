@@ -5,7 +5,19 @@ open/close them.
 
 ## Usage
 
+To just reevaluate a ramdisk:
+
 	make RAMDISK_OLD=<your old ramdisk>
+
+To open a ramdiskand tamper with it:
+
+	$ ./ramdisk.sh open [<ramdisk file, defaults to /uramdisk.image.gz>]
+	.... tamper in ./ramdisk-mnt  probably using sudo...
+	$ ./ramdisk.sh close [<ramdisk file, defaults to /uramdisk.image.gz>]
+
+That will produce a uramdisk and say where with:
+
+	Created proper ramdisk!: <valid ramdisk>
 
 At some pount it will say something along the lines of
 
